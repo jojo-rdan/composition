@@ -11,3 +11,8 @@ type Item struct {
 func New(id uint, product string, value float64) Item {
 	return Item{id, product, value}
 }
+
+// Getter value
+func (i Item) Value() float64 {
+	return i.value
+}
