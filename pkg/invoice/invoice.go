@@ -1,8 +1,8 @@
 package invoice
 
 import (
-	"github.com/jojo-rdan/composition/tree/master/pkg/customer"
-	"github.com/jojo-rdan/composition/tree/master/pkg/invoiceitem"
+	"github.com/jojo-rdan/composition/pkg/customer"
+	"github.com/jojo-rdan/composition/pkg/invoiceitem"
 )
 
 // Los corchetes implican que la relación es de uno a muchos
@@ -18,7 +18,7 @@ type Invoice struct {
 // SetTotal is the setter of Invoice.total
 func (i *Invoice) SetTotal() {
 	for _, item := range i.items {
-		i.total += item.value()
+		i.total += item.Value()
 	}
 }
 
